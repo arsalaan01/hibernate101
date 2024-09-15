@@ -21,6 +21,8 @@
     border: 1px solid #125B9A;
     border-radius: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form h3 {
@@ -66,4 +68,124 @@
 
 h3 {
     color:#125B9A;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: coral;
+    color: white;
+    padding: 10px 30px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a:hover {
+    color: green;
+}
+
+.link {
+    height: 250px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: all 0.3s ease-in;
+}
+
+button.green {
+    border: 1px solid green;
+    color: green;
+    font-weight: bolder;
+}
+
+button.blue {
+    border: 1px solid blue;
+    color: blue;
+    font-weight: bolder;
+}
+
+button.red {
+    border: 1px solid red;
+    color: red;
+    font-weight: bolder;
+}
+
+button.orange {
+    border: 1px solid orange;
+    color: orange;
+    font-weight: bolder;
+}
+
+button.green:hover {
+    background: green;
+    color: white;
+}
+
+button.blue:hover {
+    background: blue;
+    color: white;
+}
+
+button.red:hover {
+    background: red;
+    color: white;
+}
+
+button.orange:hover {
+    background: orange;
+    color: white;
+}
+
+a.red {
+    color: red;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table,td,th {
+    border:none;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    color: #125B9A;
+
+}
+
+td {
+    text-align: center;
+}
+
+.lib-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
 }

@@ -6,5 +6,5 @@ public interface StudentDao {
 
     public void registerStudent(Student student);
 
-    public Student authenticateStudent(Student student);
+    Student authenticateStudent(String username, String password);
 }

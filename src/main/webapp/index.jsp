@@ -8,6 +8,12 @@
 </head>
 <body>
     <div class="container">
+        <%
+            String errorMessage = (String) request.getAttribute("error");
+            if (errorMessage != null) {
+                out.println("<p style='color:red;'>" + errorMessage + "</p>");
+            }
+        %>
         <div class="form">
             <h3>Login</h3>
             <div class="input">

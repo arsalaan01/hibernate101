@@ -24,7 +24,19 @@ public class StudentDaoImpl implements StudentDao{
     }
 
     @Override
-    public Student authenticateStudent(Student student) {
-        return null;
+    public Student authenticateStudent(String username, String password) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Student student = null;
+        try {
+            student = (Student) session.createQuery("FROM Student WHERE username = :username AND password = :password")
+                    .setParameter("username", username)
+                    .setParameter("password", password)
+                    .uniqueResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return student;
     }
 }
